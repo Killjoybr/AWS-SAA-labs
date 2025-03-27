@@ -1,4 +1,4 @@
-# Laboratórios-EscolaDaNuvem-AWS-Solutions-Architecht
+# Laboratórios-EscolaDaNuvem-AWS-Solutions-Architect
 
 ## Evidências
 
