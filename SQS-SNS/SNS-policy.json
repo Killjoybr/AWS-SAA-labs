@@ -39,7 +39,7 @@
     	"Condition":{
 	    	"ArnLike":{
           "__Comentario":"Este é para comunicar a api qual será o valor do ARN, nesse caso o arn do bucket S3",
-	    		"aws:SourceArn":"arn:aws:sns:us-east-1:399352911984:notificacoes-s3-ruan-david-04-04-2024" 
+	    		"aws:SourceArn":"arn:aws:s3:::eventos-s3-ruan-david-dasilva-04-04-2024" 
 	    	}
 	    }
     }
