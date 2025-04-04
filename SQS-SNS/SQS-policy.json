@@ -1,0 +1,35 @@
+{
+  "Version": "2012-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__owner_statement",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::399352911984:root"
+      },
+      "Action": [
+        "SQS:SendMessage",
+        "SQS:ReceiveMessage",
+        "SQS:DeleteMessage",
+        "SQS:GetQueueAttributes",
+        "SQS:SetQueueAttributes",
+        "SQS:ListQueues"
+      ],
+      "Resource": "arn:aws:sqs:us-east-1:399352911984:fila-eventos-s3-ruan-david-04-04-2025"
+    },
+    {
+      "Sid": "AllowSNSToSendMessageToSQS",
+      "Effect": "Allow",
+      "Principal": {
+      "Service": "sns.amazonaws.com"
+    },
+    "Action": "sqs:SendMessage",
+    "Resource": "arn:aws:sqs:us-east-1:399352911984:fila-eventos-s3-ruan-david-04-04-2025",
+    "Condition": {
+      "ArnEquals": {
+        "aws:SourceArn": "arn:aws:sns:us-east-1:399352911984:notificacoes-s3-ruan-david-04-04-2024"
+      }
+    }
+  ]
+}
