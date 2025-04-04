@@ -26,9 +26,10 @@
     },
     "Action": "sqs:SendMessage",
     "Resource": "arn:aws:sqs:us-east-1:399352911984:fila-eventos-s3-ruan-david-04-04-2025",
-    "Condition": {
-      "ArnEquals": {
-        "aws:SourceArn": "arn:aws:sns:us-east-1:399352911984:notificacoes-s3-ruan-david-04-04-2024"
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": "arn:aws:sns:us-east-1:399352911984:notificacoes-s3-ruan-david-04-04-2024"
+        }
       }
     }
   ]
